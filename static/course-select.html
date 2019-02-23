@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What's My Timetable?</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    </head>
+    
+    <body>
+        
+        <!--Title-->
+        <section class="hero is-info is-bold">
+            <div class="hero-body">
+                <div class="container is-fluid">
+                    <h1 class="title">Courses and Faculties</h1>
+                    <h2 class="subtitle">Select the courses that you want the algorithm to try to fit into your timetable along with the priority for each subject, and for every faculty available for that subject.</h2>
+                </div>
+            </div>
+        </section>
+        <br>
+        
+        <!--Extra Details?-->
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Credits Registered</p>
+                <p class="title">27</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">University Core</p>
+                <p class="title">0</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">University Elective</p>
+                <p class="title">0</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Program Core</p>
+                <p class="title">0</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Program Elective</p>
+                <p class="title">0</p>
+                </div>
+            </div>
+        </nav>
+        <br>
+
+        <!--Primary Input-->
+        <div class="field has-addons has-addons-centered">
+            <p class="control">
+            <span class="select is-medium">
+                <select>
+                    <option>Slot</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>G</option>
+                </select>
+            </span>
+            </p>
+            <p class="control">
+            <span class="select is-medium">
+                <select>
+                    <option>Subject</option>
+                    <option>Data Structures and Algorithms</option>
+                    <option>Software Engineering</option>
+                    <option>Database Management</option>
+                    <option>Computer Architecture</option>
+                    <option>SAS</option>
+                    <option>SSL</option>
+                </select>
+            </span>
+            </p>
+            <p class="control">
+            <span class="select is-medium">
+                <select>
+                    <option>Priority</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </span>
+            </p>
+            <p class="control">
+                <a class="button is-primary is-medium">Add</a>
+            </p>
+        </div>
+        <br>
+        
+        <!--Selected courses and their inputs-->    
+        <div class="container">
+            <h1 class="title">Your basket:</h1>
+            <div class="notification">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">CSE2003 - Data Structures and Algorithms</p>
+                        
+                        <div class="container is-fluid">
+                            <div class="notification">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i id="card-collapse-icon" class="fas fa-angle-up" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        
+                        <a href="#" class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i id="card-close-icon" class="fas fa-times" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Theory Slot</th>
+                                        <th>Lab Slot</th>
+                                        <th>Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bharathiraja</td>
+                                        <td>A1+TA1</td>
+                                        <td>L31+L32</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jayaram</td>
+                                        <td>A1+TA1</td>
+                                        <td>L41+L42</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">CSE2003 - Data Structures and Algorithms</p>
+                        
+                        <div class="container is-fluid">
+                            <div class="notification">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i id="card-collapse-icon" class="fas fa-angle-up" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        
+                        <a href="#" class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i id="card-close-icon" class="fas fa-times" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Theory Slot</th>
+                                        <th>Lab Slot</th>
+                                        <th>Priority</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bharathiraja</td>
+                                        <td>A1+TA1</td>
+                                        <td>L31+L32</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jayaram</td>
+                                        <td>A1+TA1</td>
+                                        <td>L41+L42</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+                
+        <!--Submit buttons-->
+        <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+                <a class="button is-light">
+                    Return to Home Page
+                </a>
+            </p>
+            <p class="control">
+                <a class="button is-primary">
+                    Create my Timetable!
+                </a>
+            </p>
+        </div>
+        
+        <br><br><br><br>        
+        <script src="../src/course-select.js"></script>
+    </body>
+</html>

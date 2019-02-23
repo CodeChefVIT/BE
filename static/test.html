@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>What's My Timetable?</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() 
+            {
+                let cardToggles = document.getElementsByClassName('card-toggle');
+                //document.getElementById("code&title").innerHTML = CSE2003 - Data Structures and Algorithms;
+                for (let i = 0; i < cardToggles.length; i++) 
+                {
+                    cardToggles[i].addEventListener('click', e => {
+                        e.currentTarget.parentElement.parentElement.childNodes[3].classList.toggle('is-hidden');
+                    });
+                }
+            });
+           
+            function closeFunction()
+            {
+                var elem = document.getElementById("subject1");
+                return elem.parentNode.removeChild(elem);
+            }
+            
+            function setDetails()
+            {
+                document.getElementById("code&title").innerHTML = "CSE2003 - Data Structures and Algorithms";
+                document.getElementById("sub-priority").value = '2';
+            }
+        </script>
+    </head>
+    <body onload="setDetails()">
+        <div class="container">
+            <h1 class="title">Your basket:</h1>
+            <div class="notification" id="hello">
+                <div class="card" id="subject1">
+                    <header class="card-header">
+                        <p class="card-header-title" id="code&title"></p>
+                        
+                        <div class="container is-fluid">
+                            <div class="notification">
+                                <div class="select">
+                                    <select id="sub-priority">
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="card-header-icon card-toggle" aria-label="more options">
+                            <span class="icon">
+                                <i class="fas fa-angle-up"></i>
+                            </span>
+                        </a>
+                        
+                        <a onclick="closeFunction()" id="closeThis" class="card-header-icon">
+                            <span class="icon">
+                                <i id="card-close-icon" class="fas fa-times"></i>
+                            </span>
+                        </a>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Theory Slot</th>
+                                        <th>Lab Slot</th>
+                                        <th>Priority</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>Bharathiraja</td>
+                                        <td>A1+TA1</td>
+                                        <td>L31+L32</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Jayaram</td>
+                                        <td>A1+TA1</td>
+                                        <td>L41+L42</td>
+                                        <td>
+                                            <div class="control">
+                                                <div class="select">
+                                                    <select>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </body>
+</html>
